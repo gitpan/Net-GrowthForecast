@@ -1,0 +1,35 @@
+---
+abstract: 'A client library for awesome visualization tool GrowthForecast'
+author:
+  - 'tagomoris (TAGOMORI Satoshi) <tagomoris {at} gmail.com>'
+build_requires:
+  ExtUtils::MakeMaker: 6.36
+  File::Find::Rule: 0
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.36
+distribution_type: module
+dynamic_config: 1
+generated_by: 'Module::Install version 1.06'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Net-GrowthForecast
+no_index:
+  directory:
+    - example
+    - inc
+    - t
+requires:
+  File::Find::Rule: 0
+  Furl: 0
+  JSON::XS: 0
+  List::MoreUtils: 0
+  Log::Minimal: 0
+  Test::More: 0
+  Try::Tiny: 0
+resources:
+  license: http://dev.perl.org/licenses/
+  repository: git://github.com/tagomoris/p5-Net-GrowthForecast.git
+version: 0.01
