@@ -11,7 +11,7 @@ use JSON::XS;
 
 use Try::Tiny;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 #TODO: basic authentication support
 
@@ -265,9 +265,9 @@ Net::GrowthForecast - A client library for awesome visualization tool GrowthFore
 
 =head1 SYNOPSIS
 
-    use GrowthForecast;
+    use Net::GrowthForecast;
 
-    my $gf = GrowthForecast->new( host => 'localhost', port => 5125 );
+    my $gf = Net::GrowthForecast->new( host => 'localhost', port => 5125 );
 
     $gf->post( 'serviceName', 'sectionName', 'graphName', $update_value );
 
@@ -293,6 +293,8 @@ Net::GrowthForecast - A client library for awesome visualization tool GrowthFore
 =head1 DESCRIPTION
 
 Net::GrowthForecast is a client library for GrowthForecast JSON API. This supports GET/LIST/EDIT/ADD/REMOVE simple graphs and complex graphs.
+
+USE GrowthForecast v0.33 or later
 
 =head1 METHODS
 
@@ -445,7 +447,7 @@ mode: You should specify $mode at graph creation if you want 'derive' graph.
 
 Returns success or not.
 
-=item $gf->complex( $service, $section, $graph_name, $description, $sumup, $sort, $type, $gmode, $stack, @data_graph_ids )
+=item $gf->add_complex( $service, $section, $graph_name, $description, $sumup, $sort, $type, $gmode, $stack, @data_graph_ids )
 
 Add complex graph with specified options. All arguments are reequired, and type/gmode/stack will used for all sub data graphs. Returns success or not.
 
